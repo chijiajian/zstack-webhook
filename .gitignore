@@ -1,0 +1,5 @@
+# Ignore everything in the 'test' directory
+/test/*
+
+# Keep the 'test' directory itself, but not its contents
+!/test/

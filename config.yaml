@@ -1,0 +1,14 @@
+server:
+  port: 8080
+  https: false
+  #cert_file: "/path/to/your/cert.pem"
+  #key_file: "/path/to/your/key.pem"
+
+webhooks:
+  - type: "slack"
+    config:
+      url: "https://hooks.slack.com/services/TAAAAAA"  # using marketplace/-incoming-webhook  URL
+  - type: "telegram"
+    config:
+      bot_token: "827..:AAAAA..." 
+      chat_id: "88888888" 
