@@ -15,9 +15,11 @@ type ServerConfig struct {
 }
 
 type WebHookConfig struct {
-	URL      string `yaml:"url,omitempty"`
-	BotToken string `yaml:"bot_token,omitempty" json:"botToken,omitempty"`
-	ChatID   string `yaml:"chat_id,omitempty" json:"chatID,omitempty"`
+	URL      string   `yaml:"url,omitempty"`
+	BotToken string   `yaml:"bot_token,omitempty" json:"botToken,omitempty"` //telegram bot token
+	ChatID   string   `yaml:"chat_id,omitempty" json:"chatID,omitempty"`     //telegram chat id
+	Secret   string   `yaml:"secret,omitempty"`                              // dingtalk robot secret
+	Fields   []string `yaml:"fields,omitempty"`
 }
 
 type WebhookTarget struct {

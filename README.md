@@ -7,6 +7,11 @@ The application serves as a simple HTTP server that listens for incoming ZStack 
 - Flexible Output: Display alerts as clean, formatted text or raw JSON.
 
 - Multiple Targets: Simultaneously send alerts to different platforms.
+  - slack
+
+  - telegram
+
+  - dingtalk
 
 - Easy to Configure: All settings are managed through a single YAML file.
 
@@ -55,6 +60,15 @@ webhooks:
     config:
       bot_token: "123456789:AABBCCDDEEFF-GGCCHHIIJJKKLLMMNNOOPP"
       chat_id: "1234567890" # For a group, it starts with a '-'.
+  - type: "dingtalk"
+    config:
+      url: "https://oapi.dingtalk.com/robot/send?access_token=your_access_token"
+      # Optional: Add the secret if your bot is configured with signature verification.
+      # secret: "your_secret_key"
+      fields:
+        - alertname
+        - status
+        - current_value
 ```
 
 Note: You must obtain the Bot Token and Chat ID from Telegram's @BotFather and a Slack Webhook URL from your Slack workspace.
