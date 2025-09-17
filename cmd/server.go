@@ -21,7 +21,7 @@ var serveCmd = &cobra.Command{
 			log.Fatalf("Failed to load config file: %v", err)
 		}
 
-		log.Printf("Loaded config: %+v\n", cfg)
+		//log.Printf("Loaded config: %+v\n", cfg)
 
 		outputFormat := viper.GetString("output")
 
@@ -42,9 +42,9 @@ var serveCmd = &cobra.Command{
 func init() {
 	rootCmd.AddCommand(serveCmd)
 
-	serveCmd.Flags().StringP("config", "c", "config.yaml", "配置文件路径")
+	serveCmd.Flags().StringP("config", "c", "config.yaml", "Path to the configuration file")
 	viper.BindPFlag("config", serveCmd.Flags().Lookup("config"))
 
-	serveCmd.Flags().StringP("output", "o", "text", "输出格式: 'text' 或 'json'")
+	serveCmd.Flags().StringP("output", "o", "text", "Output format: 'text' or 'json'")
 	viper.BindPFlag("output", serveCmd.Flags().Lookup("output"))
 }

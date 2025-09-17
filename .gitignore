@@ -3,3 +3,5 @@
 
 # Keep the 'test' directory itself, but not its contents
 !/test/
+
+./zstack-webhook

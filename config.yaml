@@ -12,3 +12,13 @@ webhooks:
     config:
       bot_token: "827..:AAAAA..." 
       chat_id: "88888888" 
+  - type: "dingtalk"
+    config:
+      # dingtalk robot Webhook URL
+      url: "https://oapi.dingtalk.com/robot/send?access_token=your_access_token"
+      # Option: dingtalk webhook secret
+      secret: "your_secret_key" 
+      fields:
+        - alertname
+        - status
+        - current_value
